@@ -19,7 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\GameObjects\pipes.cpp" />
+    <ClCompile Include="..\src\GameObjects\player.cpp" />
     <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\Screens\game.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\GameObjects\pipes.h" />
+    <ClInclude Include="..\src\GameObjects\player.h" />
+    <ClInclude Include="..\src\Screens\game.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

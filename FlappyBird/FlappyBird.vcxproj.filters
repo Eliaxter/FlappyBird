@@ -4,10 +4,36 @@
     <Filter Include="src">
       <UniqueIdentifier>{2c9467b1-4c85-403c-a5b6-9135744a6056}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\GameObjects">
+      <UniqueIdentifier>{9d996555-854e-4c91-842e-89648a1eb560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Screens">
+      <UniqueIdentifier>{8ce9ae41-1b7b-4ee3-8ed3-568f20679441}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\GameObjects\pipes.cpp">
+      <Filter>src\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GameObjects\player.cpp">
+      <Filter>src\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Screens\game.cpp">
+      <Filter>src\Screens</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\GameObjects\pipes.h">
+      <Filter>src\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GameObjects\player.h">
+      <Filter>src\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Screens\game.h">
+      <Filter>src\Screens</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
