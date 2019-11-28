@@ -1,13 +1,9 @@
-#include "raylib.h"
+#include "Screens/game.h"
+
+using namespace Game;
 
 int main() 
 {
-	InitWindow(1280, 720, "Flappy");
-	while (!WindowShouldClose())
-	{
-		BeginDrawing();
-		ClearBackground(BLACK);
-		EndDrawing();
-	}
+	GameLoop();
 	return 0;
 }
