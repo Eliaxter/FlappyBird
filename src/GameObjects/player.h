@@ -1,9 +1,22 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-class Player
+
+#include "raylib.h"
+
+namespace Game
 {
-public:
-	Player();
-	~Player();
-};
+	struct Player 
+	{
+		Rectangle rec;
+		int lifes;
+		Texture2D sprite;
+	};
+
+	extern Player player;
+
+	void InitPlayer();
+	void MovePlayer();
+	void DrawPlayer();
+}
+
 #endif

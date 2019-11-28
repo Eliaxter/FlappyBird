@@ -1,10 +1,14 @@
 #include "pipes.h"
 
-Pipes::Pipes()
+namespace Game
 {
-}
+	void InitPipes()
+	{
 
+	}
 
-Pipes::~Pipes()
-{
+	void DrawPipes()
+	{
+
+	}
 }

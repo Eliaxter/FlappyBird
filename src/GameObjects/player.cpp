@@ -1,9 +1,19 @@
 #include "player.h"
 
-Player::Player()
+namespace Game
 {
-}
+	void InitPlayer() 
+	{
 
-Player::~Player()
-{
+	}
+
+	void MovePlayer() 
+	{
+
+	}
+	
+	void DrawPlayer() 
+	{
+
+	}
 }
