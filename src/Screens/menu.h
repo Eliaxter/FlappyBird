@@ -3,7 +3,9 @@
 
 namespace Game 
 {
-
+	void InputMenu();
+	void DrawTextMenu();
+	void MenuScreen();
 }
 
 #endif

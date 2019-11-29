@@ -3,7 +3,9 @@
 
 namespace Game 
 {
-
+	void InputInstructions();
+	void DrawTextInstructions();
+	void InstructionsScreen();
 }
 
 #endif

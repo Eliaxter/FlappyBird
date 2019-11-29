@@ -2,12 +2,13 @@
 
 #include "raylib.h"
 
-#include "screens/game.h"
+#include "game.h"
+#include "gameobjects/player.h"
 
 namespace Game
 {
-	const int screenWidth = 680;
-	const int screenHeight = 480;
+	const int screenWidth = 800;
+	const int screenHeight = 450;
 	const int minScreenWidth = 0;
 	const int minScreenHeight = 0;
 
@@ -16,7 +17,7 @@ namespace Game
 		InitWindow(screenWidth, screenHeight, "Happy Flappy -V0.1");
 	}
 
-	void GamePlay() 
+	void GamePlayScreen() 
 	{
 		Update();
 		Draw();
@@ -29,7 +30,6 @@ namespace Game
 
 	void Draw() 
 	{
-		BeginDrawing();
-		EndDrawing();
+		ClearBackground(BLACK);
 	}
 }

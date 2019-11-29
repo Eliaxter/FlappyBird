@@ -3,7 +3,9 @@
 
 namespace Game 
 {
-
+	void InputCredits();
+	void DrawTextCredits();
+	void CreditsScreen();
 }
 
 #endif

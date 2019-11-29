@@ -2,7 +2,11 @@
 
 #include "raylib.h"
 
-#include "screens/gameplay.h"
+#include "gameplay.h"
+#include "menu.h"
+#include "instructions.h"
+#include "final_menu.h"
+#include "credits.h"
 
 
 namespace Game
@@ -11,34 +15,36 @@ namespace Game
 
 	void GameLoop()
 	{
+		InitWindowGame();
 		while (!WindowShouldClose())
 		{
-			InitWindowGame();
+			BeginDrawing();
 			ClearBackground(BLACK);
 			if (gameState == GameState::StartMenu)
 			{
-
+				MenuScreen();
 			}
 			if (gameState == GameState::Instructions)
 			{
-
+				InstructionsScreen();
 			}
 			if (gameState == GameState::Game)
 			{
-				GamePlay();
+				GamePlayScreen();
 			}
 			if (gameState == GameState::FinalMenu)
 			{
-
+				FinalMenuScreen();
 			}
 			if (gameState == GameState::Credits)
 			{
-
+				CreditsScreen();
 			}
 			if (gameState == GameState::CloseAll)
 			{
-
+				CloseWindow();
 			}
+			EndDrawing();
 		}
 	}
 
