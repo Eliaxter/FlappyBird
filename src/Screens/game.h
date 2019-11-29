@@ -17,8 +17,8 @@ namespace Game
 
 	extern GameState gameState;
 
-	extern const float screenWidth;
-	extern const float screenHeight;
+	extern const int screenWidth;
+	extern const int screenHeight;
 	extern const int minScreenWidth;
 	extern const int minScreenHeight;
 

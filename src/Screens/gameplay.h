@@ -3,6 +3,8 @@
 
 namespace Game
 {
+	void InitWindowGame();
+	void GamePlay();
 	void Update();
 	void Draw();
 }

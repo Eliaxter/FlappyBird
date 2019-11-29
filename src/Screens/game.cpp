@@ -2,21 +2,18 @@
 
 #include "raylib.h"
 
+#include "screens/gameplay.h"
+
 
 namespace Game
 {
 	GameState gameState = GameState::StartMenu;
 
-	const float screenWidth = 680.0f;
-	const float screenHeight = 480.0f;
-	const int minScreenWidth = 0;
-	const int minScreenHeight = 0;
-
 	void GameLoop()
 	{
 		while (!WindowShouldClose())
 		{
-			BeginDrawing();
+			InitWindowGame();
 			ClearBackground(BLACK);
 			if (gameState == GameState::StartMenu)
 			{
@@ -28,7 +25,7 @@ namespace Game
 			}
 			if (gameState == GameState::Game)
 			{
-
+				GamePlay();
 			}
 			if (gameState == GameState::FinalMenu)
 			{
@@ -42,7 +39,6 @@ namespace Game
 			{
 
 			}
-			EndDrawing();
 		}
 	}
 
