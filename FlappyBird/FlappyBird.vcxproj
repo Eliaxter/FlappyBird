@@ -19,7 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\gameobjects\pipes.cpp" />
+    <ClCompile Include="..\src\gameobjects\player.cpp" />
     <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\screens\game.cpp" />
+    <ClCompile Include="..\src\screens\gameplay.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\gameobjects\pipes.h" />
+    <ClInclude Include="..\src\gameobjects\player.h" />
+    <ClInclude Include="..\src\screens\game.h" />
+    <ClInclude Include="..\src\screens\gameplay.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -86,11 +96,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\raylib-2.5.0-Win32-msvc15\include;$(SolutionDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\raylib-2.5.0-Win32-msvc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>raylib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
     <PostBuildEvent>
       <Command>$(SolutionDir)FlappyBird\execute.bat "$(SolutionDir)lib\raylib-2.5.0-Win32-msvc15\bin\raylib.dll" "$(OutDir)"</Command>
@@ -112,13 +123,15 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib\raylib-2.5.0-Win32-msvc15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\raylib-2.5.0-Win32-msvc15\include;$(SolutionDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\raylib-2.5.0-Win32-msvc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>raylib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
     <PostBuildEvent>
       <Command>$(SolutionDir)FlappyBird\execute.bat "$(SolutionDir)lib\raylib-2.5.0-Win32-msvc15\bin\raylib.dll" "$(OutDir)"</Command>
