@@ -16,4 +16,9 @@ namespace Game
 	{
 
 	}
+
+	void LimitWithScreen()
+	{
+
+	}
 }
