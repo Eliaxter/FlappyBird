@@ -22,14 +22,22 @@
     <ClCompile Include="..\src\gameobjects\pipes.cpp" />
     <ClCompile Include="..\src\gameobjects\player.cpp" />
     <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\screens\credits.cpp" />
+    <ClCompile Include="..\src\screens\final_menu.cpp" />
     <ClCompile Include="..\src\screens\game.cpp" />
     <ClCompile Include="..\src\screens\gameplay.cpp" />
+    <ClCompile Include="..\src\screens\instructions.cpp" />
+    <ClCompile Include="..\src\screens\menu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\gameobjects\pipes.h" />
     <ClInclude Include="..\src\gameobjects\player.h" />
+    <ClInclude Include="..\src\screens\credits.h" />
+    <ClInclude Include="..\src\screens\final_menu.h" />
     <ClInclude Include="..\src\screens\game.h" />
     <ClInclude Include="..\src\screens\gameplay.h" />
+    <ClInclude Include="..\src\screens\instructions.h" />
+    <ClInclude Include="..\src\screens\menu.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -92,7 +100,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
@@ -104,7 +112,8 @@
       <SubSystem>Console</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>$(SolutionDir)FlappyBird\execute.bat "$(SolutionDir)lib\raylib-2.5.0-Win32-msvc15\bin\raylib.dll" "$(OutDir)"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -117,7 +126,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>

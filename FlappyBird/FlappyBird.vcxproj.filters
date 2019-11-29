@@ -27,6 +27,18 @@
     <ClCompile Include="..\src\screens\gameplay.cpp">
       <Filter>src\screens</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\screens\credits.cpp">
+      <Filter>src\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\screens\final_menu.cpp">
+      <Filter>src\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\screens\instructions.cpp">
+      <Filter>src\screens</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\screens\menu.cpp">
+      <Filter>src\screens</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\gameobjects\pipes.h">
@@ -39,6 +51,18 @@
       <Filter>src\screens</Filter>
     </ClInclude>
     <ClInclude Include="..\src\screens\gameplay.h">
+      <Filter>src\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\screens\credits.h">
+      <Filter>src\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\screens\final_menu.h">
+      <Filter>src\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\screens\instructions.h">
+      <Filter>src\screens</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\screens\menu.h">
       <Filter>src\screens</Filter>
     </ClInclude>
   </ItemGroup>
