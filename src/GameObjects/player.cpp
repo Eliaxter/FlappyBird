@@ -20,10 +20,10 @@ namespace Game
 
 	void MovePlayer() 
 	{
-		player.rec.y += 500.0f * GetFrameTime();
+		player.rec.y += 100.0f * GetFrameTime();
 		if (IsKeyDown(KEY_SPACE))
 		{
-			player.rec.y -= 500.0f * GetFrameTime();
+			player.rec.y -= 600.0f * GetFrameTime();
 		}
 	}
 	
