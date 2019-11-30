@@ -4,6 +4,7 @@
 
 #include "game.h"
 #include "gameobjects/player.h"
+#include "gameobjects/pipes.h"
 
 namespace Game
 {
@@ -20,6 +21,7 @@ namespace Game
 	void InitGame() 
 	{
 		InitPlayer();
+		InitPipes();
 	}
 
 	void GamePlayScreen()
@@ -38,5 +40,6 @@ namespace Game
 	{
 		ClearBackground(BLACK);
 		DrawPlayer();
+		DrawPipes();
 	}
 }

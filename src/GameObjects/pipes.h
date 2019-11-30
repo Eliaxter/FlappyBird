@@ -11,7 +11,8 @@ namespace Game
 		Texture2D sprite;
 	};
 
-	extern Pipes tube;
+	extern const int sizePipes;
+	extern Pipes tube[4];
 
 	void InitPipes();
 	void DrawPipes();
