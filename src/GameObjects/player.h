@@ -9,6 +9,7 @@ namespace Game
 	{
 		Rectangle rec;
 		int lifes;
+		bool isAlive;
 		Texture2D sprite;
 	};
 

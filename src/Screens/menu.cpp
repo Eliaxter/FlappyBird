@@ -3,6 +3,7 @@
 #include "raylib.h"
 
 #include "game.h"
+#include "gameplay.h"
 
 namespace Game 
 {
@@ -45,5 +46,6 @@ namespace Game
 	{
 		InputMenu();
 		DrawTextMenu();
+		InitGame();
 	}
 }

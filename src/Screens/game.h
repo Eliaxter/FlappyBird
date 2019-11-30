@@ -19,8 +19,8 @@ namespace Game
 
 	extern const int screenWidth;
 	extern const int screenHeight;
-	extern const int minScreenWidth;
-	extern const int minScreenHeight;
+	extern int minScreenWidth;
+	extern int minScreenHeight;
 
 	extern Music backgroundMusic;
 

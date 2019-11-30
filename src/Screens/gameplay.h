@@ -4,6 +4,7 @@
 namespace Game
 {
 	void InitWindowGame();
+	void InitGame();
 	void GamePlayScreen();
 	void Update();
 	void Draw();
