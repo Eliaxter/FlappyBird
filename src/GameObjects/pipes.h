@@ -12,7 +12,7 @@ namespace Game
 	};
 
 	extern const int sizePipes;
-	extern Pipes tube[4];
+	extern Pipes tube[];
 
 	void InitPipes();
 	void MovePipes();

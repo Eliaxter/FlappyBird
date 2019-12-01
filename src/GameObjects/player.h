@@ -10,6 +10,8 @@ namespace Game
 		Rectangle rec;
 		int lifes;
 		int points;
+		float speed;
+		float gravity;
 		bool isAlive;
 		Texture2D sprite;
 	};

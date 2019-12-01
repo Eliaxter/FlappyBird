@@ -16,15 +16,20 @@ namespace Game
 		player.rec.height = 50.0f;
 		player.lifes = 3;
 		player.points = 0;
+		player.speed = 600.0f;
+		player.gravity = 300.0f;
 		player.isAlive = true;
 	}
 
 	void MovePlayer() 
 	{
-		player.rec.y += 200.0f * GetFrameTime();
 		if (IsKeyDown(KEY_SPACE))
 		{
-			player.rec.y -= 600.0f * GetFrameTime();
+			player.rec.y -= player.speed * GetFrameTime();
+		}
+		else 
+		{
+			player.rec.y += player.gravity * GetFrameTime();
 		}
 	}
 	
