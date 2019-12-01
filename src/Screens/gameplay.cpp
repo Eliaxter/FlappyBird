@@ -34,6 +34,8 @@ namespace Game
 	{
 		MovePlayer();
 		LimitWithScreen();
+		MovePipes();
+		PipesOutOfScreen();
 	}
 
 	void Draw() 

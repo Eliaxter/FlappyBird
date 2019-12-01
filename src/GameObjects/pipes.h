@@ -15,6 +15,8 @@ namespace Game
 	extern Pipes tube[4];
 
 	void InitPipes();
+	void MovePipes();
+	void PipesOutOfScreen();
 	void DrawPipes();
 }
 
