@@ -15,12 +15,13 @@ namespace Game
 		player.rec.width = 50.0f;
 		player.rec.height = 50.0f;
 		player.lifes = 3;
+		player.points = 0;
 		player.isAlive = true;
 	}
 
 	void MovePlayer() 
 	{
-		player.rec.y += 100.0f * GetFrameTime();
+		player.rec.y += 200.0f * GetFrameTime();
 		if (IsKeyDown(KEY_SPACE))
 		{
 			player.rec.y -= 600.0f * GetFrameTime();
