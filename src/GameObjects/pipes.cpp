@@ -73,12 +73,7 @@ namespace Game
 	{
 		for (int i = 0; i < sizePipes; i++)
 		{
-			DrawRectangle(static_cast<int>(tube[0].rec.x), static_cast<int>(tube[0].rec.y), static_cast<int>(tube[0].rec.width), static_cast<int>(tube[0].rec.height), GREEN);
-			DrawRectangle(static_cast<int>(tube[1].rec.x), static_cast<int>(tube[1].rec.y), static_cast<int>(tube[1].rec.width), static_cast<int>(tube[1].rec.height), GREEN);
-			DrawRectangle(static_cast<int>(tube[2].rec.x), static_cast<int>(tube[2].rec.y), static_cast<int>(tube[2].rec.width), static_cast<int>(tube[2].rec.height), GREEN);
-			DrawRectangle(static_cast<int>(tube[3].rec.x), static_cast<int>(tube[3].rec.y), static_cast<int>(tube[3].rec.width), static_cast<int>(tube[3].rec.height), GREEN);
-			DrawRectangle(static_cast<int>(tube[4].rec.x), static_cast<int>(tube[4].rec.y), static_cast<int>(tube[4].rec.width), static_cast<int>(tube[4].rec.height), GREEN);
-			DrawRectangle(static_cast<int>(tube[5].rec.x), static_cast<int>(tube[5].rec.y), static_cast<int>(tube[5].rec.width), static_cast<int>(tube[5].rec.height), GREEN);
+			DrawRectangle(static_cast<int>(tube[i].rec.x), static_cast<int>(tube[i].rec.y), static_cast<int>(tube[i].rec.width), static_cast<int>(tube[i].rec.height), GREEN);
 		}
 	}
 }
