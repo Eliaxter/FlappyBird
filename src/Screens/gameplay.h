@@ -13,8 +13,6 @@ namespace Game
 
 	extern Texture2D background;
 
-	float extern timer;
-
 	extern Vector2 playerPosition;
 	extern Rectangle frameRec;
 	extern float currentFrame;

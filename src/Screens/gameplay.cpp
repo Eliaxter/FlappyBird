@@ -15,8 +15,6 @@ namespace Game
 
 	Texture2D background;
 
-	float timer = 0.0f;
-
 	Vector2 playerPosition;
 	Rectangle frameRec;
 	float currentFrame = 0.0f;
