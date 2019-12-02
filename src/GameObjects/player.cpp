@@ -19,6 +19,7 @@ namespace Game
 		player.speed = 600.0f;
 		player.gravity = 300.0f;
 		player.isAlive = true;
+		player.sprite = LoadTexture("assets/sprites/000.png");
 	}
 
 	void MovePlayer() 
@@ -35,7 +36,8 @@ namespace Game
 	
 	void DrawPlayer() 
 	{
-		DrawRectangle(static_cast<int>(player.rec.x), static_cast<int>(player.rec.y), static_cast<int>(player.rec.width), static_cast<int>(player.rec.height), WHITE);
+		//DrawRectangle(static_cast<int>(player.rec.x), static_cast<int>(player.rec.y), static_cast<int>(player.rec.width), static_cast<int>(player.rec.height), WHITE);
+		DrawTexture(player.sprite, player.rec.x, player.rec.y, WHITE);
 	}
 
 	void LimitWithScreen()

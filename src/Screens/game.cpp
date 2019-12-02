@@ -7,6 +7,7 @@
 #include "instructions.h"
 #include "final_menu.h"
 #include "credits.h"
+#include "gameobjects/player.h"
 
 
 namespace Game
@@ -46,6 +47,7 @@ namespace Game
 			}
 			EndDrawing();
 		}
+		UnloadTexture(player.sprite);
 	}
 
 }

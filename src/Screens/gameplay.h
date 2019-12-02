@@ -8,6 +8,8 @@ namespace Game
 	void GamePlayScreen();
 	void Update();
 	void Draw();
+
+	extern float timer;
 }
 
 #endif

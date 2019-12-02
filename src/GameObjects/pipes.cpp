@@ -82,7 +82,6 @@ namespace Game
 				tube[5].rec.x = screenWidth;
 				tube[5].rec.y = tube[4].rec.height + pipesDistance;
 				tube[5].rec.height = screenHeight - tube[4].rec.height + pipesDistance;
-
 			}
 		}
 	}
