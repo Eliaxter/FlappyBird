@@ -15,29 +15,29 @@ namespace Game
 
 	void InitPipes()
 	{
-		tube[0].rec.x = 300.0f;
+		tube[0].rec.x = 400.0f;
 		tube[0].rec.y = 0.0f;
 		tube[0].rec.width = 80.0f;
 		tube[0].rec.height = GetRandomValue(0, screenHeight - player.rec.height * 2);
-		tube[1].rec.x = 300.0f;
+		tube[1].rec.x = 400.0f;
 		tube[1].rec.y = tube[0].rec.height + pipesDistance;
 		tube[1].rec.width = 80.0f;
 		tube[1].rec.height = screenHeight - tube[0].rec.height + pipesDistance;
 
-		tube[2].rec.x = 600.0f;
+		tube[2].rec.x = 700.0f;
 		tube[2].rec.y = 0.0f;
 		tube[2].rec.width = 80.0f;
 		tube[2].rec.height = GetRandomValue(0, screenHeight - player.rec.height * 2);
-		tube[3].rec.x = 600.0f;
+		tube[3].rec.x = 700.0f;
 		tube[3].rec.y = tube[2].rec.height + pipesDistance;
 		tube[3].rec.width = 80.0f;
 		tube[3].rec.height = screenHeight - tube[2].rec.height + pipesDistance;
 
-		tube[4].rec.x = 900.0f;
+		tube[4].rec.x = 1000.0f;
 		tube[4].rec.y = 0.0f;
 		tube[4].rec.width = 80.0f;
 		tube[4].rec.height = GetRandomValue(0, screenHeight - player.rec.height * 2);
-		tube[5].rec.x = 900.0f;
+		tube[5].rec.x = 1000.0f;
 		tube[5].rec.y = tube[4].rec.height + pipesDistance;
 		tube[5].rec.width = 80.0f;
 		tube[5].rec.height = screenHeight - tube[4].rec.height + pipesDistance;
