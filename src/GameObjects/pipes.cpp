@@ -47,7 +47,7 @@ namespace Game
 	{
 		for (int i = 0; i < sizePipes; i++)
 		{
-			tube[i].rec.x -= 400.0f * GetFrameTime();
+			tube[i].rec.x -= 300.0f * GetFrameTime();
 		}
 	}
 
