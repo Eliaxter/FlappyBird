@@ -86,4 +86,16 @@ namespace Game
 		}
 	}
 
+	void PlayerGetPoints()
+	{
+		for (int i = 0; i < sizePipes; i++)
+		{
+			if (player.rec.x >= tube[i].rec.x)
+			{
+				player.points++;
+			}
+		}
+		
+	}
+
 }

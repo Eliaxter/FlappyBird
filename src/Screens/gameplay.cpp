@@ -33,6 +33,7 @@ namespace Game
 	{
 		InitPlayer();
 		InitPipes();
+		player.points = 0;
 		background = LoadTexture("assets/sprites/bg-large-1.png");
 	}
 
@@ -49,6 +50,7 @@ namespace Game
 		MovePipes();
 		PipesOutOfScreen();
 		CollisionPlayerWithPipes();
+		PlayerGetPoints();
 		timer++;
 	}
 
@@ -56,6 +58,7 @@ namespace Game
 	{
 		ClearBackground(BLACK);
 		DrawTexture(background, minScreenWidth, minScreenHeight, WHITE);
+		DrawText(TextFormat("Points: %i", player.points), 100, 50, 20, WHITE);
 		DrawPlayer();
 		DrawPipes();
 	}
