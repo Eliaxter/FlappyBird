@@ -90,9 +90,10 @@ namespace Game
 	{
 		for (int i = 0; i < sizePipes; i++)
 		{
-			if (player.rec.x >= tube[i].rec.x)
+			if (tube[i].rec.x < 0)
 			{
 				player.points++;
+				PipesOutOfScreen();
 			}
 		}
 		
