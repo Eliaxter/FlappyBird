@@ -11,6 +11,8 @@ namespace Game
 	void Update();
 	void Draw();
 
+	extern Texture2D background;
+
 	float extern timer;
 
 	extern Vector2 playerPosition;

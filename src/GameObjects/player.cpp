@@ -46,7 +46,9 @@ namespace Game
 
 			currentFrame++;
 			if (currentFrame > 1)
+			{
 				currentFrame = 0;
+			}
 
 			frameRec.x = static_cast<float>(currentFrame*(player.sprite.width / 2));
 			frameRec.y = static_cast<float>(currentFrame*(player.sprite.height / 2));

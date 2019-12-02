@@ -13,6 +13,8 @@ namespace Game
 	int minScreenWidth = 0;
 	int minScreenHeight = 0;
 
+	Texture2D background;
+
 	float timer = 0.0f;
 
 	Vector2 playerPosition;
@@ -31,6 +33,7 @@ namespace Game
 	{
 		InitPlayer();
 		InitPipes();
+		background = LoadTexture("assets/sprites/bg-large-1.png");
 	}
 
 	void GamePlayScreen()
@@ -51,6 +54,7 @@ namespace Game
 	void Draw() 
 	{
 		ClearBackground(BLACK);
+		DrawTexture(background, minScreenWidth, minScreenHeight, WHITE);
 		DrawPlayer();
 		DrawPipes();
 	}

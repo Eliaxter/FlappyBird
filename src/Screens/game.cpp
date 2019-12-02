@@ -48,6 +48,7 @@ namespace Game
 			EndDrawing();
 		}
 		UnloadTexture(player.sprite);
+		UnloadTexture(background);
 	}
 
 }
