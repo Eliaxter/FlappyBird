@@ -49,6 +49,8 @@ namespace Game
 		}
 		UnloadTexture(player.sprite);
 		UnloadTexture(background);
+		UnloadSound(pointSFX);
+		UnloadSound(wingSFX);
 	}
 
 }

@@ -9,6 +9,8 @@
 namespace Game
 {
 	Player player;
+	Sound pointSFX;
+	Sound wingSFX;
 
 	void InitPlayer() 
 	{
@@ -23,6 +25,8 @@ namespace Game
 		player.isAlive = true;
 		player.sprite = LoadTexture("assets/sprites/bird-atlas.png");
 		frameRec = { 0.0f, 0.0f, static_cast<float>(player.sprite.height / 2), static_cast<float>(player.sprite.width / 2) };
+		pointSFX = LoadSound("assets/sounds/sfx_point.wav");
+		wingSFX = LoadSound("assets/sounds/sfx_wing.wav");
 	}
 
 	void MovePlayer() 
@@ -30,6 +34,7 @@ namespace Game
 		if (IsKeyDown(KEY_SPACE))
 		{
 			player.rec.y -= player.speed * GetFrameTime();
+			PlaySound(wingSFX);
 		}
 		else 
 		{

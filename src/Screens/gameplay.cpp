@@ -28,6 +28,7 @@ namespace Game
 	{
 		InitWindow(screenWidth, screenHeight, "Happy Flappy -V0.1");
 		InitGame();
+		InitAudioDevice();
 	}
 
 	void InitGame() 

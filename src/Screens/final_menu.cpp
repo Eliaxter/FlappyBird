@@ -33,6 +33,8 @@ namespace Game
 		{
 			UnloadTexture(player.sprite);
 			UnloadTexture(background);
+			UnloadSound(pointSFX);
+			UnloadSound(wingSFX);
 			gameState = GameState::Game;
 			InitGame();
 		}
@@ -44,6 +46,8 @@ namespace Game
 		{
 			UnloadTexture(player.sprite);
 			UnloadTexture(background);
+			UnloadSound(pointSFX);
+			UnloadSound(wingSFX);
 			gameState = GameState::StartMenu;
 			InitGame();
 		}

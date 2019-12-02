@@ -18,6 +18,9 @@ namespace Game
 
 	extern Player player;
 
+	extern Sound pointSFX;
+	extern Sound wingSFX;
+
 	void InitPlayer();
 	void MovePlayer();
 	void DrawPlayer();

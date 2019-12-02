@@ -65,6 +65,7 @@ namespace Game
 				tube[i].rec.y = tube[i - 1].rec.height + pipesDistance;
 				tube[i].rec.height = screenHeight - tube[i - 1].rec.height + pipesDistance;
 				player.points++;
+				PlaySound(pointSFX);
 			}
 		}
 	}
