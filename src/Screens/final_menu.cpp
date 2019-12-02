@@ -31,6 +31,8 @@ namespace Game
 	{
 		if (IsKeyDown(KEY_Y))
 		{
+			UnloadTexture(player.sprite);
+			UnloadTexture(background);
 			gameState = GameState::Game;
 			InitGame();
 		}
@@ -40,7 +42,10 @@ namespace Game
 		}
 		if (IsKeyDown(KEY_M))
 		{
+			UnloadTexture(player.sprite);
+			UnloadTexture(background);
 			gameState = GameState::StartMenu;
+			InitGame();
 		}
 		if (IsKeyDown(KEY_C))
 		{

@@ -27,6 +27,7 @@ namespace Game
 	void InitWindowGame() 
 	{
 		InitWindow(screenWidth, screenHeight, "Happy Flappy -V0.1");
+		InitGame();
 	}
 
 	void InitGame() 
@@ -50,16 +51,14 @@ namespace Game
 		MovePipes();
 		PipesOutOfScreen();
 		CollisionPlayerWithPipes();
-		PlayerGetPoints();
-		timer++;
 	}
 
 	void Draw() 
 	{
 		ClearBackground(BLACK);
 		DrawTexture(background, minScreenWidth, minScreenHeight, WHITE);
-		DrawText(TextFormat("Points: %i", player.points), 100, 50, 20, WHITE);
 		DrawPlayer();
 		DrawPipes();
+		DrawText(TextFormat("Points: %i", player.points), 100, 50, 20, WHITE);
 	}
 }

@@ -3,6 +3,8 @@
 #include "raylib.h"
 
 #include "game.h"
+#include "gameplay.h"
+#include "gameobjects/player.h"
 
 namespace Game 
 {
@@ -35,7 +37,10 @@ namespace Game
 		}
 		if (IsKeyDown(KEY_M))
 		{
+			UnloadTexture(player.sprite);
+			UnloadTexture(background);
 			gameState = GameState::StartMenu;
+			InitGame();
 		}
 	}
 	void DrawTextCredits() 

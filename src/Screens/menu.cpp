@@ -46,6 +46,5 @@ namespace Game
 	{
 		InputMenu();
 		DrawTextMenu();
-		InitGame();
 	}
 }
