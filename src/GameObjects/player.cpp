@@ -3,6 +3,7 @@
 #include "raylib.h"
 
 #include "screens/game.h"
+#include "screens/gameplay.h"
 
 namespace Game
 {
@@ -19,7 +20,8 @@ namespace Game
 		player.speed = 600.0f;
 		player.gravity = 300.0f;
 		player.isAlive = true;
-		player.sprite = LoadTexture("assets/sprites/000.png");
+		player.sprite = LoadTexture("assets/sprites/bird-atlas.png");
+		frameRec = { 0.0f, 0.0f, static_cast<float>(player.sprite.height / 2), static_cast<float>(player.sprite.width / 2) };
 	}
 
 	void MovePlayer() 
@@ -36,8 +38,22 @@ namespace Game
 	
 	void DrawPlayer() 
 	{
-		//DrawRectangle(static_cast<int>(player.rec.x), static_cast<int>(player.rec.y), static_cast<int>(player.rec.width), static_cast<int>(player.rec.height), WHITE);
-		DrawTexture(player.sprite, player.rec.x, player.rec.y, WHITE);
+		framesCounter += GetFrameTime();
+
+		if (framesCounter >= (maxCounter))
+		{
+			framesCounter = 0;
+
+			currentFrame++;
+			if (currentFrame > 1)
+				currentFrame = 0;
+
+			frameRec.x = static_cast<float>(currentFrame*(player.sprite.width / 2));
+			frameRec.y = static_cast<float>(currentFrame*(player.sprite.height / 2));
+		}
+		playerPosition = { player.rec.x, player.rec.y };
+
+		DrawTextureRec(player.sprite, frameRec, playerPosition, WHITE);
 	}
 
 	void LimitWithScreen()

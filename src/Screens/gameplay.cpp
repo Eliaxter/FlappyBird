@@ -13,6 +13,15 @@ namespace Game
 	int minScreenWidth = 0;
 	int minScreenHeight = 0;
 
+	float timer = 0.0f;
+
+	Vector2 playerPosition;
+	Rectangle frameRec;
+	float currentFrame = 0.0f;
+	float framesCounter = 0.0f;
+
+	float maxCounter = 0.5f;
+
 	void InitWindowGame() 
 	{
 		InitWindow(screenWidth, screenHeight, "Happy Flappy -V0.1");
@@ -36,6 +45,7 @@ namespace Game
 		LimitWithScreen();
 		MovePipes();
 		PipesOutOfScreen();
+		timer++;
 	}
 
 	void Draw() 
