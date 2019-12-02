@@ -48,6 +48,7 @@ namespace Game
 		LimitWithScreen();
 		MovePipes();
 		PipesOutOfScreen();
+		CollisionPlayerWithPipes();
 		timer++;
 	}
 

@@ -22,6 +22,7 @@ namespace Game
 	void MovePlayer();
 	void DrawPlayer();
 	void LimitWithScreen();
+	void CollisionPlayerWithPipes();
 }
 
 #endif

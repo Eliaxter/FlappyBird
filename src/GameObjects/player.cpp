@@ -2,6 +2,7 @@
 
 #include "raylib.h"
 
+#include "gameobjects/pipes.h"
 #include "screens/game.h"
 #include "screens/gameplay.h"
 
@@ -69,4 +70,20 @@ namespace Game
 			player.rec.y = static_cast<float>(screenHeight) - player.rec.height;
 		}
 	}
+
+	void CollisionPlayerWithPipes() 
+	{
+		for (int i = 0; i < sizePipes; i++)
+		{
+			if (CheckCollisionRecs(player.rec, tube[i].rec))
+			{
+				player.isAlive = false;
+				if (player.isAlive == false)
+				{
+					gameState = GameState::FinalMenu;
+				}
+			}
+		}
+	}
+
 }
