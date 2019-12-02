@@ -86,17 +86,4 @@ namespace Game
 		}
 	}
 
-	void PlayerGetPoints()
-	{
-		for (int i = 0; i < sizePipes; i++)
-		{
-			if (tube[i].rec.x < 0)
-			{
-				player.points++;
-				PipesOutOfScreen();
-			}
-		}
-		
-	}
-
 }

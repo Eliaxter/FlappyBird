@@ -55,33 +55,16 @@ namespace Game
 	{
 		for (int i = 0; i < sizePipes; i++)
 		{
-			if (tube[0].rec.x <= minScreenWidth - playerWidth && tube[1].rec.x <= minScreenWidth - playerWidth)
+			if (tube[i].rec.x <= minScreenWidth - playerWidth && tube[i + 1].rec.x <= minScreenWidth - playerWidth)
 			{
-				tube[0].rec.x = screenWidth;
-				tube[0].rec.y = 0.0f;
-				tube[0].rec.height = GetRandomValue(0, screenHeight - player.rec.height * 2);
-				tube[1].rec.x = screenWidth;
-				tube[1].rec.y = tube[0].rec.height + pipesDistance;
-				tube[1].rec.height = screenHeight - tube[0].rec.height + pipesDistance;
-			}
-			if (tube[2].rec.x <= minScreenWidth - playerWidth && tube[3].rec.x <= minScreenWidth - playerWidth)
-			{
-				tube[2].rec.x = screenWidth;
-				tube[2].rec.y = 0.0f;
-				tube[2].rec.height = GetRandomValue(0, screenHeight - player.rec.height * 2);
-				tube[3].rec.x = screenWidth;
-				tube[3].rec.y = tube[2].rec.height + pipesDistance;
-				tube[3].rec.height = screenHeight - tube[2].rec.height + pipesDistance;
-
-			}
-			if (tube[4].rec.x <= minScreenWidth - playerWidth && tube[5].rec.x <= minScreenWidth - playerWidth)
-			{
-				tube[4].rec.x = screenWidth;
-				tube[4].rec.y = 0.0f;
-				tube[4].rec.height = GetRandomValue(0, screenHeight - player.rec.height * 2);
-				tube[5].rec.x = screenWidth;
-				tube[5].rec.y = tube[4].rec.height + pipesDistance;
-				tube[5].rec.height = screenHeight - tube[4].rec.height + pipesDistance;
+				tube[i].rec.x = screenWidth;
+				tube[i].rec.y = 0.0f;
+				tube[i].rec.height = GetRandomValue(0, screenHeight - player.rec.height * 2);
+				i++;
+				tube[i].rec.x = screenWidth;
+				tube[i].rec.y = tube[i - 1].rec.height + pipesDistance;
+				tube[i].rec.height = screenHeight - tube[i - 1].rec.height + pipesDistance;
+				player.points++;
 			}
 		}
 	}
