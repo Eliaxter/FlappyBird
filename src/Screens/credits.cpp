@@ -63,7 +63,7 @@ namespace Game
 
 		DrawText("To exit, press the key: ESCAPE", coordTxt6X, coordTxt6Y, fontSize, RAYWHITE);
 
-		DrawText("Version: V0.2", coordTxt7X, coordTxt7Y, fontSize, RED);
+		DrawText("Version: V1.0", coordTxt7X, coordTxt7Y, fontSize, RED);
 
 	}
 
