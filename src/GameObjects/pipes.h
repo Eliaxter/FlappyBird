@@ -8,6 +8,7 @@ namespace Game
 	struct Pipes 
 	{
 		Rectangle rec;
+		float speed;
 		Texture2D sprite;
 	};
 

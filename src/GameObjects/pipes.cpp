@@ -41,13 +41,18 @@ namespace Game
 		tube[5].rec.y = tube[4].rec.height + static_cast<float>(pipesDistance);
 		tube[5].rec.width = 80.0f;
 		tube[5].rec.height = static_cast<float>(screenHeight - tube[4].rec.height + pipesDistance);
+
+		for (int i = 0; i < sizePipes; i++)
+		{
+			tube[i].speed = 200.0f;
+		}
 	}
 
 	void MovePipes()
 	{
 		for (int i = 0; i < sizePipes; i++)
 		{
-			tube[i].rec.x -= 300.0f * GetFrameTime();
+			tube[i].rec.x -= tube[i].speed * GetFrameTime();
 		}
 	}
 
