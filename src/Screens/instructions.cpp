@@ -10,22 +10,19 @@ namespace Game
 {
 	static int fontSize1 = 20;
 	static int fontSize2 = 25;
-	static int fontSize3 = 30;
+	static int fontSize3 = 50;
 
-	static int coordTxtX = 340;
-	static int coordTxtY = 120;
+	static int coordTxtX = 250;
+	static int coordTxtY = 100;
 
 	static int coordTxt2X = 190;
-	static int coordTxt2Y = 160;
+	static int coordTxt2Y = 240;
 
 	static int coordTxt3X = 190;
-	static int coordTxt3Y = 180;
+	static int coordTxt3Y = 280;
 
 	static int coordTxt4X = 190;
-	static int coordTxt4Y = 200;
-
-	static int coordTxt5X = 680;
-	static int coordTxt5Y = 420;
+	static int coordTxt4Y = 320;
 
 	void InputInstructions() 
 	{
@@ -42,9 +39,13 @@ namespace Game
 
 	void DrawTextInstructions() 
 	{
-		DrawText("How To play", coordTxtX, coordTxtY, fontSize3, GRAY);
+		DrawText("How To play", coordTxtX, coordTxtY, fontSize3, YELLOW);
 
 		DrawText("To fly the bird, press the key: SPACE", coordTxt2X, coordTxt2Y, fontSize1, RAYWHITE);
+
+		DrawText("Avoid bumping into obstacles to get the most points", coordTxt3X, coordTxt3Y, fontSize1, RAYWHITE);
+
+		DrawText("To back to menu, press the key: M", coordTxt4X, coordTxt4Y, fontSize1, RAYWHITE);
 	}
 
 	void InstructionsScreen() 
