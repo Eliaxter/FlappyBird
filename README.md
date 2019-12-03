@@ -3,7 +3,7 @@
 <p align="center">Some screenshots of the video game</p>
 
 <p align="center">
-	<img src="res/assets/screenshoots/flappy-02.png" alt="">
+	<img src="res/assets/screenshoots/flappy-05.png" alt="">
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-	<img src="res/assets/screenshoots/flappy-04.png" alt="">
+	<img src="res/assets/screenshoots/flappy-06.png" alt="">
 </p>
 
 <h1>Credits</h1>
