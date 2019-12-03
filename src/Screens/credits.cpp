@@ -29,6 +29,9 @@ namespace Game
 	static int coordTxt6X = 100;
 	static int coordTxt6Y = 340;
 
+	static int coordTxt7X = 100;
+	static int coordTxt7Y = 380;
+
 	void InputCredits() 
 	{
 		if (IsKeyDown(KEY_B))
@@ -59,6 +62,9 @@ namespace Game
 		DrawText("To return Main Menu, press the key: M", coordTxt5X, coordTxt5Y, fontSize, RAYWHITE);
 
 		DrawText("To exit, press the key: ESCAPE", coordTxt6X, coordTxt6Y, fontSize, RAYWHITE);
+
+		DrawText("Version: V0.2", coordTxt7X, coordTxt7Y, fontSize, RED);
+
 	}
 
 	void CreditsScreen() 

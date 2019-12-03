@@ -55,7 +55,6 @@ namespace Game
 	{
 		InitPlayer();
 		InitPipes();
-		gameState = GameState::StartMenu;
 		player.points = 0;
 		background = LoadTexture("assets/sprites/bg-large-1.png");
 		SetMasterVolume(1);
