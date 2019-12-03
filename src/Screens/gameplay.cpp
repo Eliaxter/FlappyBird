@@ -22,6 +22,16 @@ namespace Game
 
 	float maxCounter = 0.5f;
 
+	bool pause = false;
+
+	static int halfScreenWidth = screenWidth / 2;
+	static int halfScreenHeight = screenHeight / 2;
+	static int fontSizePause = 50;
+
+	static int coordPointsX = 50;
+	static int coordPointsY = 50;
+	static int pointsTextSize = 20;
+
 	void InitWindowGame() 
 	{
 		InitWindow(screenWidth, screenHeight, "Happy Flappy -V0.2");
@@ -57,14 +67,35 @@ namespace Game
 		}
 	}
 
+	void PauseGame()
+	{
+		if (IsKeyPressed(KEY_P))
+		{
+			pause = true;
+		}
+	}
+
 	void Update() 
 	{
-		MovePlayer();
-		LimitWithScreen();
-		MovePipes();
-		PipesOutOfScreen();
-		CollisionPlayerWithPipes();
-		MuteAll();
+		if (pause == false)
+		{
+			MovePlayer();
+			LimitWithScreen();
+			MovePipes();
+			PipesOutOfScreen();
+			CollisionPlayerWithPipes();
+			MuteAll();
+			PauseGame();
+		}
+		else
+		{
+			DrawText("GAME PAUSED", halfScreenWidth, halfScreenHeight, fontSizePause, WHITE);
+			if (IsKeyPressed(KEY_P))
+			{
+				pause = false;
+			}
+		}
+		
 	}
 
 	void Draw() 
@@ -73,6 +104,6 @@ namespace Game
 		DrawTexture(background, minScreenWidth, minScreenHeight, WHITE);
 		DrawPlayer();
 		DrawPipes();
-		DrawText(TextFormat("Points: %i", player.points), 100, 50, 20, WHITE);
+		DrawText(TextFormat("Points: %i", player.points), coordPointsX, coordPointsY, pointsTextSize, WHITE);
 	}
 }

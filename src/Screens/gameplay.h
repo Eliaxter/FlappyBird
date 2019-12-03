@@ -9,6 +9,7 @@ namespace Game
 	void InitGame();
 	void GamePlayScreen();
 	void MuteAll();
+	void PauseGame();
 	void Update();
 	void Draw();
 
@@ -20,6 +21,8 @@ namespace Game
 	extern float framesCounter;
 
 	extern float maxCounter;
+
+	extern bool pause;
 }
 
 #endif
