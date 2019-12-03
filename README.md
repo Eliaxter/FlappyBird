@@ -22,5 +22,5 @@
 
 <p>Game developed by:</p>
 <p>Elias Brucart</p>
-<p>You can get this game in Itch.io: <a></a></p>
+<p>You can get this game in Itch.io: <a href="https://eliasbrucart.itch.io/happy-flappy">https://eliasbrucart.itch.io/happy-flappy</a></p>
 <p>Elias Brucart Email: <a href="mailto:eliasbrucart@hargames.com.ar">eliasbrucart@hargames.com.ar</a></p>

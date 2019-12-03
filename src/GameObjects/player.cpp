@@ -38,7 +38,6 @@ namespace Game
 				player.rec.y -= player.speed * GetFrameTime();
 				PlaySound(wingSFX);
 			}
-			
 		}
 		else 
 		{
