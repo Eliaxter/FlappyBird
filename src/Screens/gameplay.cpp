@@ -28,9 +28,21 @@ namespace Game
 	static int halfScreenHeight = screenHeight / 2;
 	static int fontSizePause = 50;
 
-	static int coordPointsX = 50;
+	static int coordPointsX = 20;
 	static int coordPointsY = 50;
 	static int pointsTextSize = 20;
+
+	static int coordMuteX = 200;
+	static int coordMuteY = 50;
+	static int pointsMuteSize = 20;
+
+	static int coordUnmuteX = 400;
+	static int coordUnmuteY = 50;
+	static int pointsUnmuteSize = 20;
+
+	static int coordPauseX = 600;
+	static int coordPauseY = 50;
+	static int pointsPauseSize = 20;
 
 	void InitWindowGame() 
 	{
@@ -105,5 +117,9 @@ namespace Game
 		DrawPlayer();
 		DrawPipes();
 		DrawText(TextFormat("Points: %i", player.points), coordPointsX, coordPointsY, pointsTextSize, WHITE);
+		DrawText("Mute Audio: M", coordMuteX, coordMuteY, pointsMuteSize, WHITE);
+		DrawText("Unmute Audio: A", coordUnmuteX, coordUnmuteY, pointsUnmuteSize, WHITE);
+		DrawText("Pause Game: P", coordPauseX, coordPauseY, pointsPauseSize, WHITE);
+
 	}
 }
