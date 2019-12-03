@@ -95,6 +95,7 @@ namespace Game
 			MovePipes();
 			PipesOutOfScreen();
 			CollisionPlayerWithPipes();
+			CheckPlayerIsAlive();
 			MuteAll();
 			PauseGame();
 		}

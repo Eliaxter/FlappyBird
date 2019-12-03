@@ -26,6 +26,7 @@ namespace Game
 	void DrawPlayer();
 	void LimitWithScreen();
 	void CollisionPlayerWithPipes();
+	void CheckPlayerIsAlive();
 }
 
 #endif

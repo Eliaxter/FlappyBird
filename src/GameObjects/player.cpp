@@ -33,8 +33,12 @@ namespace Game
 	{
 		if (IsKeyDown(KEY_SPACE))
 		{
-			player.rec.y -= player.speed * GetFrameTime();
-			PlaySound(wingSFX);
+			if (player.isAlive == true)
+			{
+				player.rec.y -= player.speed * GetFrameTime();
+				PlaySound(wingSFX);
+			}
+			
 		}
 		else 
 		{
@@ -44,24 +48,27 @@ namespace Game
 	
 	void DrawPlayer() 
 	{
-		framesCounter += GetFrameTime();
-
-		if (framesCounter >= (maxCounter))
+		if (player.isAlive == true)
 		{
-			framesCounter = 0;
+			framesCounter += GetFrameTime();
 
-			currentFrame++;
-			if (currentFrame > 1)
+			if (framesCounter >= (maxCounter))
 			{
-				currentFrame = 0;
+				framesCounter = 0;
+
+				currentFrame++;
+				if (currentFrame > 1)
+				{
+					currentFrame = 0;
+				}
+
+				frameRec.x = static_cast<float>(currentFrame*(player.sprite.width / 2));
+				frameRec.y = static_cast<float>(currentFrame*(player.sprite.height / 2));
 			}
+			playerPosition = { player.rec.x, player.rec.y };
 
-			frameRec.x = static_cast<float>(currentFrame*(player.sprite.width / 2));
-			frameRec.y = static_cast<float>(currentFrame*(player.sprite.height / 2));
+			DrawTextureRec(player.sprite, frameRec, playerPosition, WHITE);
 		}
-		playerPosition = { player.rec.x, player.rec.y };
-
-		DrawTextureRec(player.sprite, frameRec, playerPosition, WHITE);
 	}
 
 	void LimitWithScreen()
@@ -73,6 +80,7 @@ namespace Game
 		if ((player.rec.y + player.rec.height) >= screenHeight)
 		{
 			player.rec.y = static_cast<float>(screenHeight) - player.rec.height;
+			player.isAlive = false;
 		}
 	}
 
@@ -80,14 +88,21 @@ namespace Game
 	{
 		for (int i = 0; i < sizePipes; i++)
 		{
-			if (CheckCollisionRecs(player.rec, tube[i].rec))
+			if (player.isAlive == true)
 			{
-				player.isAlive = false;
-				if (player.isAlive == false)
+				if (CheckCollisionRecs(player.rec, tube[i].rec))
 				{
-					gameState = GameState::FinalMenu;
+					player.isAlive = false;
 				}
 			}
+		}
+	}
+
+	void CheckPlayerIsAlive()
+	{
+		if (player.isAlive == false)
+		{
+			gameState = GameState::FinalMenu;
 		}
 	}
 
