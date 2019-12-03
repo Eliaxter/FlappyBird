@@ -28,10 +28,6 @@ namespace Game
 		{
 			gameState = GameState::Instructions;
 		}
-		if (IsKeyDown(KEY_ESCAPE))
-		{
-			gameState = GameState::CloseAll;
-		}
 	}
 
 	void DrawTextMenu() 

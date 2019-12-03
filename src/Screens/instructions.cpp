@@ -3,6 +3,8 @@
 #include "raylib.h"
 
 #include "game.h"
+#include "gameplay.h"
+#include "gameobjects/player.h"
 
 namespace Game 
 {
@@ -29,15 +31,22 @@ namespace Game
 	{
 		if (IsKeyDown(KEY_M))
 		{
+			UnloadTexture(player.sprite);
+			UnloadTexture(background);
+			UnloadSound(pointSFX);
+			UnloadSound(wingSFX);
 			gameState = GameState::StartMenu;
+			InitGame();
 		}
 	}
+
 	void DrawTextInstructions() 
 	{
 		DrawText("How To play", coordTxtX, coordTxtY, fontSize3, GRAY);
 
 		DrawText("To fly the bird, press the key: SPACE", coordTxt2X, coordTxt2Y, fontSize1, RAYWHITE);
 	}
+
 	void InstructionsScreen() 
 	{
 		InputInstructions();

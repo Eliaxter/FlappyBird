@@ -17,7 +17,7 @@ namespace Game
 	void GameLoop()
 	{
 		InitWindowGame();
-		while (!WindowShouldClose())
+		while (!WindowShouldClose() && gameState != GameState::EndGame)
 		{
 			BeginDrawing();
 			ClearBackground(BLACK);
@@ -41,16 +41,15 @@ namespace Game
 			{
 				CreditsScreen();
 			}
-			if (gameState == GameState::CloseAll)
-			{
-				CloseWindow();
-			}
 			EndDrawing();
 		}
 		UnloadTexture(player.sprite);
 		UnloadTexture(background);
 		UnloadSound(pointSFX);
 		UnloadSound(wingSFX);
+		CloseWindow();
+		CloseAudioDevice();
+
 	}
 
 }

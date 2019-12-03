@@ -45,6 +45,7 @@ namespace Game
 			InitGame();
 		}
 	}
+
 	void DrawTextCredits() 
 	{
 		DrawText("Credits", coordTxtX, coordTxtY, fontSize1, GREEN);
@@ -59,6 +60,7 @@ namespace Game
 
 		DrawText("To exit, press the key: ESCAPE", coordTxt6X, coordTxt6Y, fontSize, RAYWHITE);
 	}
+
 	void CreditsScreen() 
 	{
 		InputCredits();

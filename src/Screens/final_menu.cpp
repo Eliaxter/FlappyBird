@@ -40,7 +40,7 @@ namespace Game
 		}
 		if (IsKeyDown(KEY_N))
 		{
-			gameState = GameState::CloseAll;
+			gameState = GameState::EndGame;
 		}
 		if (IsKeyDown(KEY_M))
 		{

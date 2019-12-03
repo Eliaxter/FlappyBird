@@ -12,7 +12,7 @@ namespace Game
 		Game,
 		FinalMenu,
 		Credits,
-		CloseAll
+		EndGame
 	};
 
 	extern GameState gameState;

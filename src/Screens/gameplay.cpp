@@ -25,14 +25,15 @@ namespace Game
 	void InitWindowGame() 
 	{
 		InitWindow(screenWidth, screenHeight, "Happy Flappy -V0.1");
-		InitGame();
 		InitAudioDevice();
+		InitGame();
 	}
 
 	void InitGame() 
 	{
 		InitPlayer();
 		InitPipes();
+		gameState = GameState::StartMenu;
 		player.points = 0;
 		background = LoadTexture("assets/sprites/bg-large-1.png");
 	}
