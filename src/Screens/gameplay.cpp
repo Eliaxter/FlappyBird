@@ -24,7 +24,7 @@ namespace Game
 
 	void InitWindowGame() 
 	{
-		InitWindow(screenWidth, screenHeight, "Happy Flappy -V0.1");
+		InitWindow(screenWidth, screenHeight, "Happy Flappy -V0.2");
 		InitAudioDevice();
 		InitGame();
 	}
@@ -36,12 +36,25 @@ namespace Game
 		gameState = GameState::StartMenu;
 		player.points = 0;
 		background = LoadTexture("assets/sprites/bg-large-1.png");
+		SetMasterVolume(1);
 	}
 
 	void GamePlayScreen()
 	{
 		Update();
 		Draw();
+	}
+
+	void MuteAll()
+	{
+		if (IsKeyDown(KEY_M))
+		{
+			SetMasterVolume(0);
+		}
+		if (IsKeyDown(KEY_A))
+		{
+			SetMasterVolume(1);
+		}
 	}
 
 	void Update() 
@@ -51,6 +64,7 @@ namespace Game
 		MovePipes();
 		PipesOutOfScreen();
 		CollisionPlayerWithPipes();
+		MuteAll();
 	}
 
 	void Draw() 

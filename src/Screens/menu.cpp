@@ -32,7 +32,7 @@ namespace Game
 
 	void DrawTextMenu() 
 	{
-		DrawText("Happy Flappy V0.1", static_cast<int>(screenWidth / 3), coordTxtY, fontSize2, GREEN);
+		DrawText("Happy Flappy V0.2", static_cast<int>(screenWidth / 3), coordTxtY, fontSize2, GREEN);
 		DrawText("To Play the game, press the key: ENTER", static_cast<int>(screenWidth / 4), coordTxt2Y, fontSize1, RAYWHITE);
 		DrawText("How To play, press the key: H", static_cast<int>(screenWidth / 4), coordTxt3Y, fontSize1, RAYWHITE);
 		DrawText("To Exit, press the key: ESCAPE", static_cast<int>(screenWidth / 4), coordTxt4Y, fontSize1, RAYWHITE);

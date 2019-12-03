@@ -8,6 +8,7 @@ namespace Game
 	void InitWindowGame();
 	void InitGame();
 	void GamePlayScreen();
+	void MuteAll();
 	void Update();
 	void Draw();
 
